@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="500dp"
+    android:height="550dp"
+    android:viewportWidth="500"
+    android:viewportHeight="550">
+
+    <!-- Grano Superior Izquierdo -->
+    <group
+        android:pivotX="0"
+        android:pivotY="0"
+        android:rotation="-42"
+        android:translateX="130"
+        android:translateY="140">
+        <!-- Silueta principal -->
+        <path
+            android:fillColor="#6C93AB"
+            android:pathData="M 0,-70 C 42,-70 65,-40 65,0 C 65,42 42,70 0,70 C -42,70 -65,42 -65,0 C -65,-40 -42,-70 0,-70 Z" />
+        <!-- Linea central (corte) -->
+        <path
+            android:fillColor="#2D4A60"
+            android:pathData="M -6,-58 C 12,-38 18,-15 10,0 C 0,18 20,40 25,48 C 15,42 3,22 4,0 C 5,-20 -22,-38 -6,-58 Z" />
+    </group>
+
+    <!-- Grano Superior Derecho (COMPLETO Y REPOSICIONADO) -->
+    <group
+        android:pivotX="0"
+        android:pivotY="0"
+        android:rotation="-15"
+        android:translateX="340"
+        android:translateY="110">
+        <!-- Silueta principal -->
+        <path
+            android:fillColor="#53758E"
+            android:pathData="M 0,-80 C 50,-80 75,-45 75,0 C 75,50 50,80 0,80 C -50,80 -75,50 -75,0 C -75,-45 -50,-80 0,-80 Z" />
+        <!-- Linea central (corte) -->
+        <path
+            android:fillColor="#2D4A60"
+            android:pathData="M -6,-65 C 14,-42 20,-15 11,0 C 0,20 22,46 28,55 C 16,48 3,24 4,0 C 5,-22 -24,-44 -6,-65 Z" />
+    </group>
+
+    <!-- Grano Principal Inferior -->
+    <group
+        android:pivotX="0"
+        android:pivotY="0"
+        android:rotation="-37"
+        android:translateX="260"
+        android:translateY="380">
+        <!-- Silueta principal -->
+        <path
+            android:fillColor="#6C93AB"
+            android:pathData="M 0,-145 C 92,-145 142,-85 142,0 C 142,92 92,145 0,145 C -92,145 -142,92 -142,0 C -142,-85 -92,-145 0,-145 Z" />
+        <!-- Linea central (corte en S suave) -->
+        <path
+            android:fillColor="#2D4A60"
+            android:pathData="M -12,-120 C 28,-78 40,-30 22,0 C 0,38 42,88 52,105 C 32,90 8,45 10,0 C 12,-42 -45,-78 -12,-120 Z" />
+    </group>
+
+</vector>

@@ -1,14 +1,265 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Login">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+     <TextView
+       android:id="@+id/tvHeader"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="125dp"
+        android:background="@drawable/sh_header_police_blue"
+        android:paddingVertical="44dp"
+       android:paddingHorizontal="16dp"
+        android:text="@string/texto_header_login"
+        android:textColor="@color/flesh"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
 
-</FrameLayout>
+    <ImageView
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:translationY="-20dp"
+        android:src="@drawable/ic_cafes"
+        android:contentDescription="@string/logo_header_cafe"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvIniciarSesion"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="-16dp"
+        android:background="@drawable/sh_btn_carmine_pink"
+        android:elevation="5dp"
+        android:paddingVertical="12dp"
+        android:text="@string/iniciar_sesion"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvRegistrar"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:layout_marginTop="-16dp"
+        android:background="@drawable/sh_btn_light_silver"
+        android:paddingVertical="12dp"
+        android:text="@string/registrar"
+        android:textAlignment="center"
+        android:textColor="@color/gunmetal"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilCorreo"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        app:hintEnabled="false"
+        app:endIconMode="clear_text"
+        app:layout_constraintTop_toBottomOf="@+id/tvIniciarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/sh_tv_bright_gray"
+            android:paddingHorizontal="16dp"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:hint="@string/correo"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPassword"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:hintEnabled="false"
+        app:endIconMode="password_toggle"
+        app:layout_constraintTop_toBottomOf="@+id/tilCorreo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/sh_tv_bright_gray"
+            android:paddingHorizontal="16dp"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:hint="@string/password"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/tvRecuperarPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="32dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="@string/password_recovery"
+        android:textColor="@color/carmine_pink"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tilPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/btnIniciarSesion"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/sh_btn_gunmetal"
+        android:text="@string/iniciar_sesion"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/tvRecuperarPassword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <View
+        android:layout_width="96dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="32dp"
+        android:background="@color/peach_velour"
+        app:layout_constraintTop_toBottomOf="@id/btnIniciarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/or_login_with"
+        android:textColor="@color/police_blue"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/btnIniciarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <View
+        android:layout_width="96dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="32dp"
+        android:background="@color/peach_velour"
+        app:layout_constraintTop_toBottomOf="@id/btnIniciarSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    
+    <ImageView
+        android:id="@+id/ivFacebook"
+        android:layout_width="110dp"
+        android:layout_height="72dp"
+        android:translationY="84dp"
+        android:layout_marginStart="32dp"
+        android:background="@drawable/sh_btn_flesh"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="18dp"
+        android:src="@drawable/ic_facebook"
+        android:contentDescription="@string/facebook"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/ivGoogle"
+        android:layout_width="110dp"
+        android:layout_height="72dp"
+        android:translationY="84dp"
+        android:background="@drawable/sh_btn_flesh"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="18dp"
+        android:src="@drawable/ic_google"
+        android:contentDescription="@string/google"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:id="@+id/ivApple"
+        android:layout_width="110dp"
+        android:layout_height="72dp"
+        android:translationY="84dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/sh_btn_flesh"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="18dp"
+        android:src="@drawable/ic_apple"
+        android:contentDescription="@string/apple"
+        app:layout_constraintTop_toBottomOf="@+id/btnIniciarSesion"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/non_account"
+            android:textColor="@color/gunmetal"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvRegistrarAhora"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:text="@string/register_now"
+            android:textColor="@color/carmine_pink"
+            android:textStyle="bold"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

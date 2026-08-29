@@ -1,14 +1,197 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.Inicio">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clHeader"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/sh_header_police_blue"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/tvTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Cavosh"
+            android:textColor="@color/carmine_pink"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/ic_cafes"
+            android:contentDescription="@string/logo_header_cafe"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:text="@string/good_morning_user"
+            android:textColor="@color/flesh"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/tvTitulo"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Tu café:"
+            android:textColor="@color/flesh"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="@+id/tvUsuario"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="70dp"
+            android:text="Cavosh Cafe"
+            android:textColor="@color/flesh"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/tvUsuario"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="72dp"
+            android:layout_marginStart="70dp"
+            android:text="Legnicka 20, Wroctaw"
+            android:textColor="@color/flesh"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/tvUsuario"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/ivBell"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="5dp"
+            android:src="@drawable/ic_bell"
+            android:contentDescription="campanita"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintTop_toTopOf="@+id/tvUsuario"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Cambiar"
+            android:textColor="@color/flesh"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toTopOf="@+id/ivBell"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    
+    <SearchView
+        android:id="@+id/svBuscar"
+        android:layout_width="360dp"
+        android:layout_height="48dp"
+        android:translationY="20dp"
+        android:background="@drawable/sh_tv_bright_gray"
+        android:iconifiedByDefault="false"
+        android:searchIcon="@null"
+        android:submitBackground="@drawable/sh_tv_bright_gray"
+        android:queryBackground="@drawable/sh_tv_bright_gray"
+        android:queryHint="Buscar"
+        app:layout_constraintBottom_toBottomOf="@+id/clHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:padding="12dp"
+        android:translationY="-28dp"
+        android:translationX="-25dp"
+        android:src="@drawable/ic_search"
+        android:contentDescription="Boton de Buscar"
+        android:background="@drawable/sh_btn_carmine_pink"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toBottomOf="@id/svBuscar"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/texto_nuevo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="@string/texto_nuevo_inicio"
+        android:textColor="@color/gunmetal"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/svBuscar"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvNuevos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/texto_nuevo"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/texto_frecuentes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:text="@string/texto_frecuentes_ordenados"
+        android:textColor="@color/gunmetal"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@+id/rvNuevos"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFrecuentes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@+id/texto_frecuentes"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

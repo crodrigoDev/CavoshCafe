@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import es.oaemdl.cavoshcafe2026.R;
 import es.oaemdl.cavoshcafe2026.databinding.FragmentLoginBinding;
 
 public class Login extends Fragment {
@@ -38,6 +39,8 @@ public class Login extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         context = getContext();
         navController = Navigation.findNavController( view );
+
+        binding.btnIniciarSesion.setOnClickListener(v -> navController.navigate( R.id.navigation_inicio ));
 
     }
 
