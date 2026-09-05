@@ -28,11 +28,14 @@ public class MainActivity extends AppCompatActivity {
         navController.addOnDestinationChangedListener((navController1, navDestination, bundle) -> {
             int id = navDestination.getId();
             if ( id == R.id.navigation_splash ||id == R.id.navigation_login ||
-                 id == R.id.navigation_registrar || id == R.id.navigation_verificar )
+                 id == R.id.navigation_registrar ) {
 
                 //id == R.id.navigation_validar ||
                 //id == R.id.navigation_menuProducto || id == R.id.navigation_menuProductoPersonalizar )
-                navView.setVisibility( View.INVISIBLE );
+                navView.setVisibility(View.GONE);
+            } else {
+                navView.setVisibility(View.VISIBLE);
+            }
         });
 
     }
